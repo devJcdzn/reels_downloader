@@ -30,16 +30,16 @@ const Home = () => {
   };
 
   const setValues = (response) => {
-    setLink(response.links[0].link);
-    setPicture(response.picture);
-    setName(response.a);
+    setPicture(response.data.picture);
+    setName(response.data.a);
+    setLink(response.data.links[0].link);
   }
 
   const handleSubmit = async () => {
     setLoading(true);
     try {
       const response = await axios.request(options);
-      const result = response.data;
+      const result = response;
 
       setValues(result);
       setLoading(false);
@@ -70,20 +70,24 @@ const Home = () => {
 
           <div className="result">
 
-            {url === '' ? 
+            {url === '' ?
               <h4 className='video-name'>Cole a sua URL</h4>
               : loading ? <h4 className='video-name'>Carregando...</h4>
-              :   
-              (<div className="result-content">
-                <h4 className="video-name">{name}</h4>
-                <div className="thum-content">
-                  <img
-                    src={picture}
-                    alt="instagram Downloader"
-                    className="thumbnail" />
-                </div>
-                <a href={link} className="download-button">Baixar</a>
-              </div>)}
+                :
+                (<div className="result-content">
+                  <h4 className="video-name">{name}</h4>
+                  <div className="thum-content">
+                    <img
+                      src={picture}
+                      alt="instagram Downloader"
+                      className="thumbnail" />
+                  </div>
+                  <a
+                    href={link}
+                    target='_blank'
+                    className="download-button"
+                    rel="noreferrer">Baixar</a>
+                </div>)}
           </div>
         </div>
       </section>

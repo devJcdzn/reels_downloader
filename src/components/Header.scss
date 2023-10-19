@@ -25,6 +25,10 @@ header {
                 span {
                     font-weight: 600;
                 }
+
+                @media screen and (min-width: 940px) {
+                    font-size: 32px;
+                }
             }
         }
 
@@ -44,6 +48,10 @@ header {
                 &:hover {
                     background-color: #fff;
                     color: #202C33;
+                }
+
+                @media screen and (min-width: 940px) {
+                    font-size: 22px;
                 }
             }
         }
