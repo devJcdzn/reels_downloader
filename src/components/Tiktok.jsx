@@ -3,6 +3,7 @@ import Header from './Header';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { useState } from 'react';
+import Request from '../utils/request';
 
 const Tiktok = () => {
   const [url, setUrl] = useState('');
