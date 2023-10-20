@@ -1,14 +1,11 @@
-import './Home.scss';
-import axios from 'axios';
-import { useState } from 'react';
-import { BsArrowBarDown } from 'react-icons/bs';
-
-import Header from './Header';
-import Navbar from './Navbar';
-import Request from '../utils/request';
+import { useState } from "react";
+import axios from "axios";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import { BsArrowBarDown } from "react-icons/bs";
 
 
-const Home = () => {
+const Youtube = () => {
   const [url, setUrl] = useState('');
   const [picture, setPicture] = useState();
   const [name, setName] = useState('');
@@ -25,7 +22,7 @@ const Home = () => {
   const setValues = (response) => {
     setPicture(response.data.picture);
     setName(response.data.a);
-    setLink(response.data.links[0].link);
+    setLink(response.data.links[0].url);
   }
 
   const handleSubmit = async () => {
@@ -90,4 +87,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Youtube;

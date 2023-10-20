@@ -1,14 +1,10 @@
-import './Home.scss';
-import axios from 'axios';
-import { useState } from 'react';
 import { BsArrowBarDown } from 'react-icons/bs';
-
 import Header from './Header';
 import Navbar from './Navbar';
-import Request from '../utils/request';
+import axios from 'axios';
+import { useState } from 'react';
 
-
-const Home = () => {
+const Tiktok = () => {
   const [url, setUrl] = useState('');
   const [picture, setPicture] = useState();
   const [name, setName] = useState('');
@@ -90,4 +86,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Tiktok;
