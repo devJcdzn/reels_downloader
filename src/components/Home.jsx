@@ -6,6 +6,8 @@ import { BsArrowBarDown } from 'react-icons/bs';
 import Header from './Header';
 import Navbar from './Navbar';
 import Request from '../utils/request';
+import Content from './Content';
+import Footer from './Footer';
 
 
 const Home = () => {
@@ -16,7 +18,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   const options = Request(url);
-  
+
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -86,6 +88,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Content />
+      <Footer />
     </>
   )
 }

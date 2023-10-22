@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import axios from 'axios';
 import { useState } from 'react';
 import Request from '../utils/request';
+import Content from './Content';
 
 const Tiktok = () => {
   const [url, setUrl] = useState('');
@@ -83,6 +84,7 @@ const Tiktok = () => {
           </div>
         </div>
       </section>
+      <Content />
     </>
   )
 }

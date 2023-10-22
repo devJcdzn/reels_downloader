@@ -4,6 +4,7 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import { BsArrowBarDown } from "react-icons/bs";
 import Request from "../utils/request";
+import Content from "./Content";
 
 
 const Youtube = () => {
@@ -84,6 +85,7 @@ const Youtube = () => {
           </div>
         </div>
       </section>
+      <Content />
     </>
   )
 }
